@@ -1,0 +1,170 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pageTitle = "Contact Us";
+const pageDescription = "Reach out to Crispy Chronicles for recipe questions, flavor explorations, or to share your crispy chicken stories. We're here to savor the conversation!";
+const contactMethods = [
+  {
+    icon: "fas fa-envelope",
+    title: "Email Us",
+    details: "hello@crispychronicles.com"
+  },
+  {
+    icon: "fas fa-map-marker-alt",
+    title: "Visit Us",
+    details: "123 Crispy Lane, Flavor Town, FT 12345"
+  },
+  {
+    icon: "fas fa-phone",
+    title: "Call Us",
+    details: "(555) 123-CHICKEN"
+  }
+];
+const reasons = [
+  {
+    icon: "fas fa-utensils",
+    title: "Recipe Inquiries",
+    description: "Need help adapting a dish or sourcing ingredients?"
+  },
+  {
+    icon: "fas fa-comments",
+    title: "Feedback & Suggestions",
+    description: "Share your twists on our techniques or suggest new global flavors."
+  },
+  {
+    icon: "fas fa-handshake",
+    title: "Collaborations",
+    description: "Interested in partnering for events, features, or crispy creations?"
+  },
+  {
+    icon: "fas fa-heart",
+    title: "General Chat",
+    description: "Just want to talk chicken? We're all ears (and taste buds)!"
+  }
+];
+---
+
+<Layout title={pageTitle} description={pageDescription}>
+  <!-- Hero Section -->
+  <div class="relative bg-gradient-to-r from-amber-800 to-amber-900 py-24 overflow-hidden">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iI2NjNTUwMCIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNwYXR0ZXJuKSIvPjwvc3ZnPg==')]"></div>
+    </div>
+    <div class="container mx-auto px-4 relative z-10">
+      <div class="max-w-3xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-serif font-bold text-white mb-6 tracking-tight">
+          Get in Touch with Crispy Chronicles
+        </h1>
+        <p class="text-xl text-amber-100 max-w-2xl mx-auto leading-relaxed">
+          Reach out to us for recipe questions, flavor explorations, or to share your crispy chicken stories. We're here to savor the conversation!
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <section class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-6 md:p-8 mb-12 border-l-4 border-amber-600">
+        <h2 class="text-2xl font-serif font-semibold text-gray-800 mb-4">At Crispy Chronicles, We Belieeve...</h2>
+        <p class="text-gray-600 mb-4 leading-relaxed">
+          Every perfectly fried wing tells a story. Whether you're a home cook experimenting with global spices or a fellow enthusiast craving that ultimate crunch, we're thrilled to connect. Have a question about our recipes? A technique tweak? Or maybe a flavor fusion idea from your corner of the world? We'd love to hear from you!
+        </p>
+        <div class="flex items-center mt-6">
+          <div class="flex-shrink-0 mr-4">
+            <div class="w-16 h-16 rounded-full bg-amber-100 flex items-center justify-center">
+              <i class="fas fa-chicken text-amber-700 text-2xl"></i>
+            </div>
+          </div>
+          <p class="text-amber-700 font-medium italic">
+            "A good recipe starts with great ingredients and even better conversations"
+          </p>
+        </div>
+      </div>
+
+      <!-- Reasons to Contact -->
+      <div class="mb-16">
+        <h2 class="text-3xl font-serif font-semibold text-gray-800 mb-8 text-center">Why Contact Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reasons.map((reason, index) => (
+            <div 
+              class="bg-gradient-to-br from-amber-50 to-amber-100 rounded-xl p-6 border border-amber-200 shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1"
+              style={{ animationDelay: `${index * 100}ms` }}
+            >
+              <div class="flex items-start">
+                <div class="flex-shrink-0 mr-4 mt-1">
+                  <div class="w-12 h-12 rounded-full bg-amber-600 flex items-center justify-center">
+                    <i class={`${reason.icon} text-white text-xl`}></i>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="text-xl font-semibold text-gray-800 mb-2">{reason.title}</h3>
+                  <p class="text-gray-600">{reason.description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Contact Methods -->
+      <div class="bg-gradient-to-r from-amber-700 to-amber-800 rounded-2xl p-8 md:p-12 shadow-xl">
+        <h2 class="text-3xl font-serif font-semibold text-white mb-8 text-center">How to Reach Us</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {contactMethods.map((method, index) => (
+            <div 
+              key={index}
+              class="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center border border-white/20"
+            >
+              <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mx-auto mb-4">
+                <i class={`${method.icon} text-white text-2xl`}></i>
+              </div>
+              <h3 class="text-xl font-semibold text-white mb-2">{method.title}</h3>
+              <p class="text-amber-100">{method.details}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial Section -->
+  <section class="py-16 bg-amber-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-serif font-semibold text-gray-800 mb-8 text-center">What Our Community Says</h2>
+        <div class="bg-white rounded-xl shadow-lg p-8">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 mr-6">
+              <div class="w-16 h-16 rounded-full bg-amber-200 flex items-center justify-center">
+                <i class="fas fa-user text-amber-700 text-xl"></i>
+              </div>
+            </div>
+            <div>
+              <p class="text-gray-600 italic mb-4">
+                "The guidance I received from Crispy Chronicles transformed my cooking! Their global flavor exploration techniques inspired me to create my own signature wing sauce. Thank you for fostering this wonderful community!"
+              </p>
+              <div class="flex items-center">
+                <span class="font-semibold text-amber-700">Maria Rodriguez</span>
+                <span class="mx-2 text-gray-300">•</span>
+                <span class="text-gray-500">Home Chef</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  @keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>
