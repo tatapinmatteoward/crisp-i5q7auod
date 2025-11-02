@@ -15,7 +15,7 @@ tags:
 
 Welcome to the first installment of *Crispy Chronicles*, where we explore the crunchy, golden world of fried foods that make our taste buds dance. If you've ever bitten into a perfectly crispy chicken wing or a shatteringly crisp tempura shrimp, you know the magic of that first crunch. But where did it all begin?
 
-## Ancient Roots of Crispiness
+## Ancient Roots of Crispiness lol
 
 Fried foods aren't a modern invention. Archaeological evidence suggests that ancient Egyptians were frying dough in fat as early as 2500 BCE. Fast forward to the Roman Empire, and fritters—small balls of dough fried in olive oil—were a street food staple. These early crisps laid the foundation for what we crave today.
 
