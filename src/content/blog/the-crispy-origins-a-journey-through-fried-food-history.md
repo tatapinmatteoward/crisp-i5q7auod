@@ -11,7 +11,7 @@ tags:
 - culinary-adventures
 ---
 
-# The Crispy Origins: A Journey Through Fried Food History
+# The Crispy Origins: A Journey Through Fried Food History I love you
 
 Welcome to the first installment of *Crispy Chronicles*, where we explore the crunchy, golden world of fried foods that make our taste buds dance. If you've ever bitten into a perfectly crispy chicken wing or a shatteringly crisp tempura shrimp, you know the magic of that first crunch. But where did it all begin?
 
